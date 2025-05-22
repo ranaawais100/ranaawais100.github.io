@@ -1,0 +1,178 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f9;
+  color: #333;
+}
+
+.resume-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.contact p {
+  margin: 5px 0;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  color: #3f3fff;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.skills, .languages, ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+.resume-button {
+  background-color: #3f3fff;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #2c2ccc;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resume-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 1.2rem;
+  }
+
+  .resume-button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+
+  section h2 {
+    font-size: 1rem;
+  }
+
+  .resume-button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  ul {
+    padding-left: 15px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+  }
+
+  .resume-container {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 10mm;
+    margin: 0;
+    width: 100%;
+    max-width: none;
+    page-break-inside: avoid;
+  }
+
+  .resume-button, .button-container {
+    display: none;
+  }
+
+  section {
+    margin-bottom: 15px;
+    page-break-inside: avoid;
+  }
+
+  section h2 {
+    color: black;
+    border-bottom: 1px solid black;
+  }
+
+  ul, li {
+    page-break-inside: avoid;
+  }
+
+  header, .contact {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+}

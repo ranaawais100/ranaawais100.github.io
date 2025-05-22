@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Rana Muhammad Awais</title>
+    <link rel="stylesheet" href="porfolio.css">
+    <link rel="icon" type="image/png" href="Images/my.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <style>
+        :root {
+            --primary-color: #0d9488;
+            --accent-color: #f59e42;
+            --bg-gradient: linear-gradient(135deg, #e0f7fa 0%, #f8fafc 100%);
+            --input-bg: #f4f8fb;
+            --input-border: #d1e3ea;
+            --shadow: 0 8px 32px rgba(13, 148, 136, 0.10);
+        }
+        body {
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .admin-login-box {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            padding: 48px 36px 36px 36px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            transition: box-shadow 0.2s;
+        }
+        .admin-login-box:hover {
+            box-shadow: 0 12px 40px rgba(13, 148, 136, 0.18);
+        }
+        .admin-login-box .logo {
+            margin-bottom: 22px;
+        }
+        .admin-login-box .logo img {
+            width: 56px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(13, 148, 136, 0.08);
+        }
+        .admin-login-box h2 {
+            margin-bottom: 22px;
+            color: var(--primary-color);
+            font-weight: 800;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+        .admin-login-box .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .admin-login-box label {
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 7px;
+            display: block;
+            font-size: 1rem;
+        }
+        .admin-login-box input {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1.5px solid var(--input-border);
+            border-radius: 7px;
+            font-size: 1rem;
+            background: var(--input-bg);
+            transition: border 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+        .admin-login-box input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px #0d948820;
+        }
+        .admin-login-box button {
+            width: 100%;
+            padding: 13px;
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 7px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(13, 148, 136, 0.08);
+            margin-top: 8px;
+            letter-spacing: 0.5px;
+        }
+        .admin-login-box button:hover {
+            background: #0f766e;
+            box-shadow: 0 4px 16px rgba(13, 148, 136, 0.13);
+        }
+        .admin-login-box .error-message {
+            color: #dc3545;
+            margin-top: 14px;
+            font-size: 1rem;
+            min-height: 24px;
+        }
+        .admin-login-box .input-icon {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            pointer-events: none;
+        }
+        .admin-login-box .input-wrapper {
+            position: relative;
+        }
+        .admin-login-box .input-wrapper input {
+            padding-left: 38px;
+        }
+        @media (max-width: 500px) {
+            .admin-login-box {
+                padding: 32px 10px 24px 10px;
+                max-width: 98vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-login-box">
+        <div class="logo">
+            <img src="Images/logo.webp" alt="Logo">
+        </div>
+        <h2>Admin Login</h2>
+        <form id="admin-login-form" autocomplete="off">
+            <div class="form-group">
+                <label for="admin-email">Email</label>
+                <div class="input-wrapper">
+                    <span class="input-icon"><i class="fa fa-envelope"></i></span>
+                    <input type="email" id="admin-email" required placeholder="Enter admin email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="admin-password">Password</label>
+                <div class="input-wrapper">
+                    <span class="input-icon"><i class="fa fa-lock"></i></span>
+                    <input type="password" id="admin-password" required placeholder="Enter password">
+                </div>
+            </div>
+            <button type="submit"><i class="fa fa-sign-in-alt"></i> Login</button>
+            <div class="error-message" id="admin-error"></div>
+        </form>
+    </div>
+    <script>
+        // Firebase config
+        const firebaseConfig = {
+            apiKey: "AIzaSyAChATTlyrWuaS6fRlLMZGK-0G4_1cWcRY",
+            authDomain: "portfolio-9b890.firebaseapp.com",
+            projectId: "portfolio-9b890",
+            storageBucket: "portfolio-9b890.appspot.com",
+            messagingSenderId: "544049035149",
+            appId: "1:544049035149:web:585c0f2ca6990063bbefc4",
+            measurementId: "G-4LQKD322ED"
+        };
+        
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        document.getElementById('admin-login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('admin-email').value.trim();
+            const password = document.getElementById('admin-password').value;
+            const errorDiv = document.getElementById('admin-error');
+            errorDiv.textContent = '';
+
+            auth.signInWithEmailAndPassword(email, password)
+                .then(cred => {
+                    // DEVELOPMENT MODE: Bypass admin check - REMOVE FOR PRODUCTION
+                    console.warn("SECURITY WARNING: Admin check bypassed - for development only");
+                    sessionStorage.setItem('isAdminAuthenticated', 'true');
+                    window.location.href = 'admin-dashboard.html';
+                    
+                    /* PRODUCTION CODE (comment out the above and uncomment this)
+                    // Check if user is admin in Firestore
+                    return db.collection('admins').doc(cred.user.uid).get();
+                })
+                .then(doc => {
+                    if (doc.exists) {
+                        sessionStorage.setItem('isAdminAuthenticated', 'true');
+                        window.location.href = 'admin-dashboard.html';
+                    } else {
+                        auth.signOut();
+                        throw new Error('You are not authorized as admin.');
+                    }
+                    */
+                })
+                .catch(err => {
+                    errorDiv.textContent = err.message.replace('Firebase:', '').trim();
+                });
+        });
+
+        // DEVELOPMENT HELPER: Auto-fill test credentials (remove in production)
+        function autoFillTestCredentials() {
+            document.getElementById('admin-email').value = 'test@example.com';
+            document.getElementById('admin-password').value = 'test1234';
+            console.warn("Auto-filled test credentials - remove in production");
+        }
+        
+        // Uncomment to auto-fill test credentials for development
+        // autoFillTestCredentials();
+    </script>
+</body>
+</html>

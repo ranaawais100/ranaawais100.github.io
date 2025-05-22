@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rana Muhammad Awais - Portfolio</title>
+    <link rel="stylesheet" href="porfolio.css">
+    <link rel="icon" type="image/png" href="Images/my.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script>
+      if (window.location.search.includes('admin')) {
+        window.location.href = 'admin.html';
+      }
+    </script>
+ 
+</head>
+<body>
+            <header>
+              <div class="logo-container">
+                <div class="logo">
+                  <img src="Images/logo.webp" alt="Logo" />
+                  RMA
+                </div>
+                <div class="toggle-container">
+                  <label class="toggle">
+                    <input type="checkbox" id="dark-mode-toggle" />
+                    <span class="slider">
+                      <span class="sun">🌞</span>
+                      <span class="moon">🌙</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <!-- Desktop nav -->
+              <nav>
+                <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#skills">Skills</a></li>
+                  <li><a href="#education">Education</a></li>
+                  <li><a href="#my-work">My Work</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </nav>
+            </header>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" onclick="toggleSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Sidebar for Mobile -->
+  <div class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#my-work">My Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+      </header>
+
+<section id="home" class="hero">
+    <div id="hero-bg"></div>
+    <div class="hero-content">
+      <h1>
+      <span class="typed-text"></span><br />
+      <span class="highlight">Frontend Developer</span>
+      </h1>
+      <p>I specialize in creating stunning, responsive websites and web applications.</p>
+      <a href="#contact" class="btn">Contact Me</a>
+      <div class="social-links" style="margin-top: 18px;">
+      <a href="https://github.com/yourusername" target="_blank" title="GitHub" class="social-icon github"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/rana-awais-95286a35b/" target="_blank" title="LinkedIn" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/awais.__here?igsh=MTd2OGYxdHhpNGp3cQ==" target="_blank" title="Instagram" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+      <!-- Add more as needed -->
+      <style>
+        .social-links .social-icon {
+          font-size: 2rem;
+          margin: 0 10px;
+          transition: color 0.3s;
+          color: #00ff99; /* Default for dark mode */
+          text-decoration: none;
+          vertical-align: middle;
+        }
+        .social-links .social-icon.github:hover { color: #fff; }
+        .social-links .social-icon.linkedin:hover { color: #0a66c2; }
+        .social-links .social-icon.instagram:hover { color: #e1306c; }
+
+        body.light-mode .social-links .social-icon {
+          color: #555555; /* Softer for light mode */
+        }
+        body.light-mode .social-links .social-icon.github:hover { color: #222; }
+        body.light-mode .social-links .social-icon.linkedin:hover { color: #0077b5; }
+        body.light-mode .social-links .social-icon.instagram:hover { color: #c13584; }
+      </style>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="Images/02.jpg" alt="Rana Muhammad Awais" />
+    </div>
+  </section>
+  <!-- About Section -->
+   <section id="about" class="about-section">
+    <h2><span>👤</span> About <span class="highlight">Me</span></h2>
+    <div class="about-container">
+      <div class="about-image">
+        <img src="Images/rana.jpeg" alt="Profile Image" />
+      </div>
+      <div class="about-content">
+        <h3>I'm Rana Muhammad Awais</h3>
+        <h4>Frontend Developer</h4>
+        <p>
+          As a passionate web developer and ACCA student, I bring both analytical thinking and creative vision into my work. With expertise in HTML, CSS, JavaScript, and React, I create interactive, responsive, and user-friendly interfaces. My goal is to combine functionality with aesthetics to deliver seamless digital experiences. I’m always exploring new technologies and striving to push boundaries in frontend development.
+        </p>
+        <p><strong>Email:</strong> ranaawais1112244@gmail.com</p>
+        <p><strong>Place:</strong> Islamabad, Pakistan</p>
+        <a href="resume.html" target="_blank">
+  <button class="resume-button">Resume</button>
+</a>
+
+      </div>
+    </div>
+  </section>
+  <!-- Skills Section -->
+   <section id="skills" class="skills-section">
+  <h2><i class="fas fa-laptop-code"></i> Skills & <span style="color: #FFD700;">Abilities</span></h2>
+  <div class="skills-grid">
+    <div class="skill-item"><img src="Images/r3.png" alt="React"><p>React</p></div>
+    <div class="skill-item"><img src="Images/h2.png" alt="HTML5"><p>HTML5</p></div>
+    <div class="skill-item"><img src="Images/css1.png" alt="CSS3"><p>CSS3</p></div>
+    <div class="skill-item"><img src="Images/js.png" alt="JavaScript"><p>JavaScript</p></div>
+    <div class="skill-item"><img src="Images/c.png" alt="C++"><p>C++</p></div>
+    <div class="skill-item"><img src="Images/chat.png" alt="ChatGPT"><p>ChatGPT</p></div>
+
+  </div>
+</section>
+ <!-- Education Section -->
+  <title>My Education</title>
+</head>
+<body>
+  <section id="education" class="education-section">
+    <h1 class="education-title">🎓 My Education</h1>
+    <p class="education-subtitle">Education Is Not The Learning Of Facts, But The Training Of The Mind To Think.</p>
+
+    <div class="education-card">
+      <img src="Images/case.webp" alt="University Image" class="edu-img">
+      <div class="edu-content">
+        <h2>Bachelor Of Science In Computer Science</h2>
+        <p class="edu-institute">Sir Syed Case <span style="color: #FFD700;">Institute of Technology | SSCASEIT</p>
+        <p class="edu-duration">2024–2028 | <span class="edu-status">Pursuing</span></p>
+      </div>
+    </div>
+  </section>
+ <!-- work  Section -->
+    <!-- Your existing header and other sections -->
+
+    
+<!-- Work Section -->
+<section id="my-work" class="section-box">
+    <div class="project-header">
+        <h2 class="section-title">My Work & Insights <span class="highlight">Works</span></h2>
+    </div>
+
+    <!-- Services Section -->
+    <div class="list-section" id="services">
+        <h2>My Services</h2>
+        <div class="list-container">
+            <div class="list-item" data-image="Images/service1.webp">
+                <span class="label">DESIGN</span>
+                <span class="item-name">Web Development</span>
+                <span class="item-time">3 months ago</span>
+            </div>
+            <div class="list-item" data-image="Images/service2.webp">
+                <span class="label">UI/UX</span>
+                <span class="item-name">UI/UX Design</span>
+                <span class="item-time">2 months ago</span>
+            </div>
+            <div class="list-item" data-image="Images/service3.webp">
+                <span class="label">SEO</span>
+                <span class="item-name">SEO Optimization</span>
+                <span class="item-time">1 month ago</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="list-section" id="projects">
+        <h2>My Projects</h2>
+        <div class="list-container">
+            <div class="list-item" data-image="Images/project1.webp">
+                <span class="label">E-COMMERCE</span>
+                <span class="item-name">E-Commerce Store</span>
+                <span class="item-time">3 months ago</span>
+            </div>
+            <div class="list-item" data-image="Images/project2.webp">
+                <span class="label">PORTFOLIO</span>
+                <span class="item-name">Portfolio Website</span>
+                <span class="item-time">2 months ago</span>
+            </div>
+            <div class="list-item" data-image="Images/project3.webp">
+                <span class="label">BUSINESS</span>
+                <span class="item-name">Business Website</span>
+                <span class="item-time">1 month ago</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blogs Section -->
+    <div class="list-section" id="blogs">
+        <h2>My Blogs</h2>
+        <div class="list-container">
+            <div class="list-item" data-image="Images/blog1.webp">
+                <span class="label">TRENDS</span>
+                <span class="item-name">Web Dev Trends</span>
+                <span class="item-time">2 weeks ago</span>
+            </div>
+            <div class="list-item" data-image="Images/blog2.webp">
+                <span class="label">UX</span>
+                <span class="item-name">UX Principles</span>
+                <span class="item-time">1 week ago</span>
+            </div>
+            <div class="list-item" data-image="Images/blog3.webp">
+                <span class="label">SEO</span>
+                <span class="item-name">SEO Tips</span>
+                <span class="item-time">3 days ago</span>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- contact Section -->
+   <section id="contact" class="contact-section">
+    <h2 class="main-contact-heading">Contact Me</h2>
+    <div class="contact-box" id="contactBox">
+      <div class="contact-image">
+        <img src="Images/contact.jpg" alt="Contact Illustration" />
+      </div>
+      <div class="contact-form">
+        <h2><i class="fas fa-headset"></i> Get In <span>Touch</span></h2>
+        <form>
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Name" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-phone"></i>
+            <input type="tel" placeholder="Phone" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-comment-dots"></i>
+            <textarea placeholder="Message" rows="4" required></textarea>
+          </div>
+          <div class="submit-wrapper">
+            <button type="submit" class="submit-btn">
+              Submit <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+<script>
+  let vantaEffect;
+
+  function initVanta(isLightMode = false) {
+    if (vantaEffect) vantaEffect.destroy();
+
+    vantaEffect = VANTA.NET({
+      el: "#hero-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.5,
+      scaleMobile: 1.0,
+      color: isLightMode ? 0x555555 : 0x00ff99, // Softer line for light mode
+      backgroundColor: isLightMode ? 0xffffff : 0x0a0a0a,
+      points: 12.0,
+      maxDistance: 22.0,
+      spacing: 18.0
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+  
+    const isLight = localStorage.getItem('dark-mode') === 'false';
+    if (isLight) {
+      body.classList.add('light-mode');
+      toggle.checked = true;
+    }
+
+    initVanta(isLight);
+
+    toggle.addEventListener('change', () => {
+      const light = toggle.checked;
+      if (light) {
+        body.classList.add('light-mode');
+        localStorage.setItem('dark-mode', 'false');
+      } else {
+        body.classList.remove('light-mode');
+        localStorage.setItem('dark-mode', 'true');
+      }
+      initVanta(light);
+    });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const text = "Hi, I'm Rana Muhammad Awais!";
+    const typedText = document.querySelector(".typed-text");
+    let index = 0;
+    let isDeleting = false;
+
+    function typeWriter() {
+      if (!isDeleting) {
+        typedText.textContent = text.substring(0, index + 1);
+        index++;
+
+        if (index === text.length) {
+          isDeleting = true;
+          setTimeout(typeWriter, 1000); // Pause at end
+          return;
+        }
+      } else {
+        typedText.textContent = text.substring(0, index - 1);
+        index--;
+
+        if (index === 0) {
+          isDeleting = false;
+        }
+      }
+
+      setTimeout(typeWriter, isDeleting ? 50 : 75);
+    }
+
+    window.addEventListener("load", typeWriter);
+  });
+
+</script>
+
+</body>
+<script>
+    document.querySelectorAll('.list-section').forEach(section => {
+      const container = section.querySelector('.list-container');
+      const preview = section.querySelector('.preview-image');
+
+      container.querySelectorAll('.list-item').forEach(item => {
+        item.addEventListener('mouseenter', () => {
+          const img = item.getAttribute('data-image');
+          preview.style.backgroundImage = `url('${img}')`;
+          preview.style.display = 'block';
+        });
+
+        item.addEventListener('mouseleave', () => {
+          preview.style.display = 'none';
+        });
+      });
+    });
+  </script>
+ <script>
+  const contactBox = document.getElementById('contactBox');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          contactBox.classList.add('show');
+        } else {
+          contactBox.classList.remove('show');
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  observer.observe(contactBox);
+</script>
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("active");
+  }
+
+  // Optional: close sidebar on link click
+  document.querySelectorAll(".sidebar a").forEach(link => {
+    link.addEventListener("click", () => {
+      document.getElementById("sidebar").classList.remove("active");
+    });
+  });
+</script>
+
+ <!-- Example: Place this at the end of your portfolio.html body -->
+<script>
+  // List of fields to update
+  const portfolioFieldNames = [
+    "homeSection.title", "homeSection.subtitle", "homeSection.description", "homeSection.image",
+    "homeSection.socialLinks.github", "homeSection.socialLinks.linkedin", "homeSection.socialLinks.instagram",
+    "aboutSection.name", "aboutSection.title", "aboutSection.description", "aboutSection.email",
+    "aboutSection.location", "aboutSection.image", "aboutSection.resume",
+    "skills", "education.degree", "education.institute", "education.instituteSuffix", "education.duration",
+    "education.status", "education.image", "services", "projects", "blogs",
+    "contactSection.image", "colorScheme.primary", "colorScheme.secondary", "colorScheme.accent"
+  ];
+
+  // Load data from localStorage
+  function loadPortfolioData() {
+    const data = JSON.parse(localStorage.getItem('dashboardData') || '{}');
+    // Example: update elements by id or class
+    if (data["homeSection.title"]) {
+      document.getElementById("home-title").textContent = data["homeSection.title"];
+    }
+    if (data["homeSection.subtitle"]) {
+      document.getElementById("home-subtitle").textContent = data["homeSection.subtitle"];
+    }
+    // ...repeat for other fields as needed
+    // For images:
+    if (data["homeSection.image"]) {
+      document.getElementById("home-image").src = data["homeSection.image"];
+    }
+    // For links:
+    if (data["homeSection.socialLinks.github"]) {
+      document.getElementById("github-link").href = data["homeSection.socialLinks.github"];
+    }
+    // etc.
+  }
+
+  document.addEventListener('DOMContentLoaded', loadPortfolioData);
+</script>
+<script>
+  // Load portfolio data from localStorage
+  document.addEventListener('DOMContentLoaded', function() {
+    const data = JSON.parse(localStorage.getItem('portfolioData') || {});
+    
+    // Home Section
+    if (data.homeTitle) document.querySelector('.typed-text').textContent = data.homeTitle;
+    if (data.homeSubtitle) document.querySelector('.highlight').textContent = data.homeSubtitle;
+    if (data.homeDescription) document.querySelector('.hero-content p').textContent = data.homeDescription;
+    if (data.homeImage) document.querySelector('.hero-image img').src = data.homeImage;
+    if (data.githubLink) document.querySelector('.social-icon.github').href = data.githubLink;
+    if (data.linkedinLink) document.querySelector('.social-icon.linkedin').href = data.linkedinLink;
+    if (data.instagramLink) document.querySelector('.social-icon.instagram').href = data.instagramLink;
+    
+    // About Section
+    if (data.aboutName) document.querySelector('.about-content h3').textContent = data.aboutName;
+    if (data.aboutTitle) document.querySelector('.about-content h4').textContent = data.aboutTitle;
+    if (data.aboutDescription) document.querySelector('.about-content p').textContent = data.aboutDescription;
+    if (data.aboutEmail) document.querySelector('.about-content p:nth-of-type(2)').innerHTML = `<strong>Email:</strong> ${data.aboutEmail}`;
+    if (data.aboutLocation) document.querySelector('.about-content p:nth-of-type(3)').innerHTML = `<strong>Place:</strong> ${data.aboutLocation}`;
+    if (data.aboutImage) document.querySelector('.about-image img').src = data.aboutImage;
+    if (data.aboutResume) document.querySelector('.resume-button').parentElement.href = data.aboutResume;
+    
+    // Skills Section
+    if (data.skills) {
+      const skillsGrid = document.querySelector('.skills-grid');
+      skillsGrid.innerHTML = '';
+      data.skills.forEach(skill => {
+        skillsGrid.innerHTML += `<div class="skill-item"><img src="${skill.image}" alt="${skill.name}"><p>${skill.name}</p></div>`;
+      });
+    }
+    
+    // Education Section
+    if (data.educationDegree) document.querySelector('.edu-content h2').textContent = data.educationDegree;
+    if (data.educationInstitute) {
+      const instituteEl = document.querySelector('.edu-institute');
+      instituteEl.innerHTML = `${data.educationInstitute} <span style="color: #FFD700;">${data.educationInstituteSuffix || ''}</span>`;
+    }
+    if (data.educationDuration) document.querySelector('.edu-duration').innerHTML = `${data.educationDuration} | <span class="edu-status">${data.educationStatus || ''}</span>`;
+    if (data.educationImage) document.querySelector('.edu-img').src = data.educationImage;
+    
+    // Work Section
+    if (data.services) {
+      const servicesList = document.querySelector('#services .list-container');
+      servicesList.innerHTML = '';
+      data.services.forEach(service => {
+        servicesList.innerHTML += `
+          <div class="list-item" data-image="${service.image}">
+            <span class="label">${service.label}</span>
+            <span class="item-name">${service.name}</span>
+            <span class="item-time">${service.time}</span>
+          </div>
+        `;
+      });
+    }
+    
+    if (data.projects) {
+      const projectsList = document.querySelector('#projects .list-container');
+      projectsList.innerHTML = '';
+      data.projects.forEach(project => {
+        projectsList.innerHTML += `
+          <div class="list-item" data-image="${project.image}">
+            <span class="label">${project.label}</span>
+            <span class="item-name">${project.name}</span>
+            <span class="item-time">${project.time}</span>
+          </div>
+        `;
+      });
+    }
+    
+    if (data.blogs) {
+      const blogsList = document.querySelector('#blogs .list-container');
+      blogsList.innerHTML = '';
+      data.blogs.forEach(blog => {
+        blogsList.innerHTML += `
+          <div class="list-item" data-image="${blog.image}">
+            <span class="label">${blog.label}</span>
+            <span class="item-name">${blog.name}</span>
+            <span class="item-time">${blog.time}</span>
+          </div>
+        `;
+      });
+    }
+    
+    // Contact Section
+    if (data.contactImage) document.querySelector('.contact-image img').src = data.contactImage;
+    if (data.contactHeading) document.querySelector('.contact-form h2 span').textContent = data.contactHeading.split(' ').pop();
+    
+    // Appearance
+    if (data.primaryColor) {
+      document.documentElement.style.setProperty('--primary', data.primaryColor);
+    }
+    if (data.secondaryColor) {
+      document.documentElement.style.setProperty('--secondary', data.secondaryColor);
+    }
+    if (data.accentColor) {
+      document.documentElement.style.setProperty('--accent', data.accentColor);
+    }
+    if (data.darkMode === 'light') {
+      document.body.classList.add('light-mode');
+      document.getElementById('dark-mode-toggle').checked = true;
+    } else if (data.darkMode === 'dark') {
+      document.body.classList.remove('light-mode');
+      document.getElementById('dark-mode-toggle').checked = false;
+    }
+  });
+</script>
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const listItems = document.querySelectorAll('.list-item');
+        
+        listItems.forEach(item => {
+            // Create image element for each item
+            const imgPreview = document.createElement('div');
+            imgPreview.className = 'item-preview';
+            item.appendChild(imgPreview);
+            
+            // Mouse enter event
+            item.addEventListener('mouseenter', function() {
+                const imageUrl = this.getAttribute('data-image');
+                if (imageUrl) {
+                    imgPreview.style.backgroundImage = `url('${imageUrl}')`;
+                    imgPreview.style.display = 'block';
+                }
+            });
+            
+            // Mouse leave event
+            item.addEventListener('mouseleave', function() {
+                imgPreview.style.display = 'none';
+            });
+        });
+    });
+</script>
+</body>
+
+</html> 

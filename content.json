@@ -1,0 +1,117 @@
+{
+    "hero": {
+        "title": "Hi, I'm Rana Muhammad Awais!",
+        "subtitle": "Frontend Developer",
+        "description": "I specialize in creating stunning, responsive websites and web applications.",
+        "buttonText": "Contact Me",
+        "image": "02.jpg"
+    },
+    "about": {
+        "name": "Rana Muhammad Awais",
+        "title": "Frontend Developer",
+        "description": "As a passionate web developer and ACCA student, I bring both analytical thinking and creative vision into my work. With expertise in HTML, CSS, JavaScript, and React, I create interactive, responsive, and user-friendly interfaces. My goal is to combine functionality with aesthetics to deliver seamless digital experiences. I'm always exploring new technologies and striving to push boundaries in frontend development.",
+        "email": "ranaawais1112244@gmail.com",
+        "location": "Islamabad, Pakistan",
+        "image": "rana.jpeg",
+        "resume": "resume.pdf"
+    },
+    "skills": [
+        { "id": 1, "name": "React", "image": "r3.png" },
+        { "id": 2, "name": "HTML5", "image": "h2.png" },
+        { "id": 3, "name": "CSS3", "image": "css1.png" },
+        { "id": 4, "name": "JavaScript", "image": "js.png" },
+        { "id": 5, "name": "C++", "image": "c.png" },
+        { "id": 6, "name": "ChatGPT", "image": "chat.png" }
+    ],
+    "education": [
+        {
+            "id": 1,
+            "degree": "Bachelor Of Science In Computer Science",
+            "institution": "Sir Syed Case Institute of Technology | SSCASEIT",
+            "duration": "2024–2028",
+            "status": "Pursuing",
+            "image": "case.webp"
+        }
+    ],
+    "services": [
+        {
+            "id": 1,
+            "label": "DESIGN",
+            "name": "Web Development",
+            "time": "3 months ago",
+            "image": "service1.webp"
+        },
+        {
+            "id": 2,
+            "label": "UI/UX",
+            "name": "UI/UX Design",
+            "time": "2 months ago",
+            "image": "service2.webp"
+        },
+        {
+            "id": 3,
+            "label": "SEO",
+            "name": "SEO Optimization",
+            "time": "1 month ago",
+            "image": "service3.webp"
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "label": "E-COMMERCE",
+            "name": "E-Commerce Store",
+            "time": "3 months ago",
+            "image": "project1.webp"
+        },
+        {
+            "id": 2,
+            "label": "PORTFOLIO",
+            "name": "Portfolio Website",
+            "time": "2 months ago",
+            "image": "project2.webp"
+        },
+        {
+            "id": 3,
+            "label": "BUSINESS",
+            "name": "Business Website",
+            "time": "1 month ago",
+            "image": "project3.webp"
+        }
+    ],
+    "blogs": [
+        {
+            "id": 1,
+            "label": "TRENDS",
+            "title": "Web Dev Trends",
+            "time": "2 weeks ago",
+            "image": "blog1.webp"
+        },
+        {
+            "id": 2,
+            "label": "UX",
+            "title": "UX Principles",
+            "time": "1 week ago",
+            "image": "blog2.webp"
+        },
+        {
+            "id": 3,
+            "label": "SEO",
+            "title": "SEO Tips",
+            "time": "3 days ago",
+            "image": "blog3.webp"
+        }
+    ],
+    "contact": {
+        "heading": "Contact Me",
+        "subheading": "Get In Touch",
+        "image": "contact.jpg",
+        "email": "ranaawais1112244@gmail.com"
+    },
+    "settings": {
+        "username": "admin",
+        "email": "ranaawais1112244@gmail.com",
+        "name": "Rana Muhammad Awais",
+        "avatar": "rana.jpeg"
+    }
+}   
